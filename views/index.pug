@@ -1,0 +1,38 @@
+html
+  head
+    title= title
+  body
+    h1= message
+  form(action="CheckUser", method="post")
+    span User name: 
+    input(type="text" name="UserName" value="louise")
+    br
+    br
+    span Password: 
+    input(type="text" name="Password" value="123456") 
+    input(type="hidden" name="LogInType" value="Unsafe") 
+    br
+    br
+    br
+    input(type="submit" value="Unsafe log in" onclick="LogInType.value='Unsafe'")
+    span &nbsp;&nbsp;&nbsp;
+    input(type="submit" value="Safer log in" onclick="LogInType.value='Safer'")
+  br
+  br
+  span For unsafe log in add:
+  br
+  br
+  span ' or '' = '
+  br
+  br
+  span to Password
+  br
+  br
+  br
+  span For unsafe adding user add:
+  br
+  br
+  span '; INSERT INTO user (id, username, password) VALUES (3, 'HackerPer', '123'); SELECT '
+  br
+  br
+  span to Password
